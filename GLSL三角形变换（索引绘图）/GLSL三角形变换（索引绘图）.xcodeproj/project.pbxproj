@@ -1,0 +1,622 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		98E2267024D93B72003F3ADD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 98E2266F24D93B72003F3ADD /* AppDelegate.m */; };
+		98E2267324D93B72003F3ADD /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 98E2267224D93B72003F3ADD /* SceneDelegate.m */; };
+		98E2267624D93B72003F3ADD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98E2267524D93B72003F3ADD /* ViewController.m */; };
+		98E2267924D93B72003F3ADD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98E2267724D93B72003F3ADD /* Main.storyboard */; };
+		98E2267B24D93B74003F3ADD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98E2267A24D93B74003F3ADD /* Assets.xcassets */; };
+		98E2267E24D93B74003F3ADD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98E2267C24D93B74003F3ADD /* LaunchScreen.storyboard */; };
+		98E2268124D93B74003F3ADD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 98E2268024D93B74003F3ADD /* main.m */; };
+		98E2268B24D93B74003F3ADD /* GLSL___________Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 98E2268A24D93B74003F3ADD /* GLSL___________Tests.m */; };
+		98E2269624D93B74003F3ADD /* GLSL___________UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 98E2269524D93B74003F3ADD /* GLSL___________UITests.m */; };
+		98E226A424D93D90003F3ADD /* shaderv.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 98E226A324D93D90003F3ADD /* shaderv.glsl */; };
+		98E226A624D93DA7003F3ADD /* shaderf.glsl in Resources */ = {isa = PBXBuildFile; fileRef = 98E226A524D93DA7003F3ADD /* shaderf.glsl */; };
+		98E226A924D944DF003F3ADD /* GLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 98E226A824D944DF003F3ADD /* GLView.m */; };
+		98E226B124D95BF3003F3ADD /* GLESUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 98E226AB24D95BF3003F3ADD /* GLESUtils.m */; };
+		98E226B224D95BF3003F3ADD /* GLESMath.c in Sources */ = {isa = PBXBuildFile; fileRef = 98E226AD24D95BF3003F3ADD /* GLESMath.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		98E2268724D93B74003F3ADD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 98E2266324D93B72003F3ADD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 98E2266A24D93B72003F3ADD;
+			remoteInfo = "GLSL三角形变换（索引绘图）";
+		};
+		98E2269224D93B74003F3ADD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 98E2266324D93B72003F3ADD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 98E2266A24D93B72003F3ADD;
+			remoteInfo = "GLSL三角形变换（索引绘图）";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		98E2266B24D93B72003F3ADD /* GLSL三角形变换（索引绘图）.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GLSL三角形变换（索引绘图）.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		98E2266E24D93B72003F3ADD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		98E2266F24D93B72003F3ADD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		98E2267124D93B72003F3ADD /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		98E2267224D93B72003F3ADD /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		98E2267424D93B72003F3ADD /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		98E2267524D93B72003F3ADD /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		98E2267824D93B72003F3ADD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		98E2267A24D93B74003F3ADD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		98E2267D24D93B74003F3ADD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		98E2267F24D93B74003F3ADD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98E2268024D93B74003F3ADD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		98E2268624D93B74003F3ADD /* GLSL三角形变换（索引绘图）Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GLSL三角形变换（索引绘图）Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		98E2268A24D93B74003F3ADD /* GLSL___________Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "GLSL___________Tests.m"; sourceTree = "<group>"; };
+		98E2268C24D93B74003F3ADD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98E2269124D93B74003F3ADD /* GLSL三角形变换（索引绘图）UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GLSL三角形变换（索引绘图）UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		98E2269524D93B74003F3ADD /* GLSL___________UITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "GLSL___________UITests.m"; sourceTree = "<group>"; };
+		98E2269724D93B74003F3ADD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		98E226A324D93D90003F3ADD /* shaderv.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = shaderv.glsl; sourceTree = "<group>"; };
+		98E226A524D93DA7003F3ADD /* shaderf.glsl */ = {isa = PBXFileReference; lastKnownFileType = text; path = shaderf.glsl; sourceTree = "<group>"; };
+		98E226A724D944DF003F3ADD /* GLView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLView.h; sourceTree = "<group>"; };
+		98E226A824D944DF003F3ADD /* GLView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLView.m; sourceTree = "<group>"; };
+		98E226AB24D95BF3003F3ADD /* GLESUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLESUtils.m; sourceTree = "<group>"; };
+		98E226AC24D95BF3003F3ADD /* Quaternion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Quaternion.h; sourceTree = "<group>"; };
+		98E226AD24D95BF3003F3ADD /* GLESMath.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = GLESMath.c; sourceTree = "<group>"; };
+		98E226AE24D95BF3003F3ADD /* GLESUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLESUtils.h; sourceTree = "<group>"; };
+		98E226AF24D95BF3003F3ADD /* Vector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vector.h; sourceTree = "<group>"; };
+		98E226B024D95BF3003F3ADD /* GLESMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLESMath.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		98E2266824D93B72003F3ADD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98E2268324D93B74003F3ADD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98E2268E24D93B74003F3ADD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		98E2266224D93B72003F3ADD = {
+			isa = PBXGroup;
+			children = (
+				98E2266D24D93B72003F3ADD /* GLSL三角形变换（索引绘图） */,
+				98E2268924D93B74003F3ADD /* GLSL三角形变换（索引绘图）Tests */,
+				98E2269424D93B74003F3ADD /* GLSL三角形变换（索引绘图）UITests */,
+				98E2266C24D93B72003F3ADD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		98E2266C24D93B72003F3ADD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				98E2266B24D93B72003F3ADD /* GLSL三角形变换（索引绘图）.app */,
+				98E2268624D93B74003F3ADD /* GLSL三角形变换（索引绘图）Tests.xctest */,
+				98E2269124D93B74003F3ADD /* GLSL三角形变换（索引绘图）UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		98E2266D24D93B72003F3ADD /* GLSL三角形变换（索引绘图） */ = {
+			isa = PBXGroup;
+			children = (
+				98E226AA24D95BF3003F3ADD /* Utils */,
+				98E2266E24D93B72003F3ADD /* AppDelegate.h */,
+				98E2266F24D93B72003F3ADD /* AppDelegate.m */,
+				98E2267124D93B72003F3ADD /* SceneDelegate.h */,
+				98E2267224D93B72003F3ADD /* SceneDelegate.m */,
+				98E2267424D93B72003F3ADD /* ViewController.h */,
+				98E2267524D93B72003F3ADD /* ViewController.m */,
+				98E2267724D93B72003F3ADD /* Main.storyboard */,
+				98E2267A24D93B74003F3ADD /* Assets.xcassets */,
+				98E2267C24D93B74003F3ADD /* LaunchScreen.storyboard */,
+				98E2267F24D93B74003F3ADD /* Info.plist */,
+				98E2268024D93B74003F3ADD /* main.m */,
+				98E226A324D93D90003F3ADD /* shaderv.glsl */,
+				98E226A524D93DA7003F3ADD /* shaderf.glsl */,
+				98E226A724D944DF003F3ADD /* GLView.h */,
+				98E226A824D944DF003F3ADD /* GLView.m */,
+			);
+			path = "GLSL三角形变换（索引绘图）";
+			sourceTree = "<group>";
+		};
+		98E2268924D93B74003F3ADD /* GLSL三角形变换（索引绘图）Tests */ = {
+			isa = PBXGroup;
+			children = (
+				98E2268A24D93B74003F3ADD /* GLSL___________Tests.m */,
+				98E2268C24D93B74003F3ADD /* Info.plist */,
+			);
+			path = "GLSL三角形变换（索引绘图）Tests";
+			sourceTree = "<group>";
+		};
+		98E2269424D93B74003F3ADD /* GLSL三角形变换（索引绘图）UITests */ = {
+			isa = PBXGroup;
+			children = (
+				98E2269524D93B74003F3ADD /* GLSL___________UITests.m */,
+				98E2269724D93B74003F3ADD /* Info.plist */,
+			);
+			path = "GLSL三角形变换（索引绘图）UITests";
+			sourceTree = "<group>";
+		};
+		98E226AA24D95BF3003F3ADD /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				98E226AB24D95BF3003F3ADD /* GLESUtils.m */,
+				98E226AC24D95BF3003F3ADD /* Quaternion.h */,
+				98E226AD24D95BF3003F3ADD /* GLESMath.c */,
+				98E226AE24D95BF3003F3ADD /* GLESUtils.h */,
+				98E226AF24D95BF3003F3ADD /* Vector.h */,
+				98E226B024D95BF3003F3ADD /* GLESMath.h */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		98E2266A24D93B72003F3ADD /* GLSL三角形变换（索引绘图） */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 98E2269A24D93B74003F3ADD /* Build configuration list for PBXNativeTarget "GLSL三角形变换（索引绘图）" */;
+			buildPhases = (
+				98E2266724D93B72003F3ADD /* Sources */,
+				98E2266824D93B72003F3ADD /* Frameworks */,
+				98E2266924D93B72003F3ADD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GLSL三角形变换（索引绘图）";
+			productName = "GLSL三角形变换（索引绘图）";
+			productReference = 98E2266B24D93B72003F3ADD /* GLSL三角形变换（索引绘图）.app */;
+			productType = "com.apple.product-type.application";
+		};
+		98E2268524D93B74003F3ADD /* GLSL三角形变换（索引绘图）Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 98E2269D24D93B74003F3ADD /* Build configuration list for PBXNativeTarget "GLSL三角形变换（索引绘图）Tests" */;
+			buildPhases = (
+				98E2268224D93B74003F3ADD /* Sources */,
+				98E2268324D93B74003F3ADD /* Frameworks */,
+				98E2268424D93B74003F3ADD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				98E2268824D93B74003F3ADD /* PBXTargetDependency */,
+			);
+			name = "GLSL三角形变换（索引绘图）Tests";
+			productName = "GLSL三角形变换（索引绘图）Tests";
+			productReference = 98E2268624D93B74003F3ADD /* GLSL三角形变换（索引绘图）Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		98E2269024D93B74003F3ADD /* GLSL三角形变换（索引绘图）UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 98E226A024D93B74003F3ADD /* Build configuration list for PBXNativeTarget "GLSL三角形变换（索引绘图）UITests" */;
+			buildPhases = (
+				98E2268D24D93B74003F3ADD /* Sources */,
+				98E2268E24D93B74003F3ADD /* Frameworks */,
+				98E2268F24D93B74003F3ADD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				98E2269324D93B74003F3ADD /* PBXTargetDependency */,
+			);
+			name = "GLSL三角形变换（索引绘图）UITests";
+			productName = "GLSL三角形变换（索引绘图）UITests";
+			productReference = 98E2269124D93B74003F3ADD /* GLSL三角形变换（索引绘图）UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		98E2266324D93B72003F3ADD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = TuDou;
+				TargetAttributes = {
+					98E2266A24D93B72003F3ADD = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					98E2268524D93B74003F3ADD = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 98E2266A24D93B72003F3ADD;
+					};
+					98E2269024D93B74003F3ADD = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 98E2266A24D93B72003F3ADD;
+					};
+				};
+			};
+			buildConfigurationList = 98E2266624D93B72003F3ADD /* Build configuration list for PBXProject "GLSL三角形变换（索引绘图）" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 98E2266224D93B72003F3ADD;
+			productRefGroup = 98E2266C24D93B72003F3ADD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				98E2266A24D93B72003F3ADD /* GLSL三角形变换（索引绘图） */,
+				98E2268524D93B74003F3ADD /* GLSL三角形变换（索引绘图）Tests */,
+				98E2269024D93B74003F3ADD /* GLSL三角形变换（索引绘图）UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		98E2266924D93B72003F3ADD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98E2267E24D93B74003F3ADD /* LaunchScreen.storyboard in Resources */,
+				98E226A424D93D90003F3ADD /* shaderv.glsl in Resources */,
+				98E2267B24D93B74003F3ADD /* Assets.xcassets in Resources */,
+				98E2267924D93B72003F3ADD /* Main.storyboard in Resources */,
+				98E226A624D93DA7003F3ADD /* shaderf.glsl in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98E2268424D93B74003F3ADD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98E2268F24D93B74003F3ADD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		98E2266724D93B72003F3ADD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98E2267624D93B72003F3ADD /* ViewController.m in Sources */,
+				98E2267024D93B72003F3ADD /* AppDelegate.m in Sources */,
+				98E226B224D95BF3003F3ADD /* GLESMath.c in Sources */,
+				98E2268124D93B74003F3ADD /* main.m in Sources */,
+				98E2267324D93B72003F3ADD /* SceneDelegate.m in Sources */,
+				98E226B124D95BF3003F3ADD /* GLESUtils.m in Sources */,
+				98E226A924D944DF003F3ADD /* GLView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98E2268224D93B74003F3ADD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98E2268B24D93B74003F3ADD /* GLSL___________Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98E2268D24D93B74003F3ADD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98E2269624D93B74003F3ADD /* GLSL___________UITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		98E2268824D93B74003F3ADD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 98E2266A24D93B72003F3ADD /* GLSL三角形变换（索引绘图） */;
+			targetProxy = 98E2268724D93B74003F3ADD /* PBXContainerItemProxy */;
+		};
+		98E2269324D93B74003F3ADD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 98E2266A24D93B72003F3ADD /* GLSL三角形变换（索引绘图） */;
+			targetProxy = 98E2269224D93B74003F3ADD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		98E2267724D93B72003F3ADD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				98E2267824D93B72003F3ADD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		98E2267C24D93B74003F3ADD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				98E2267D24D93B74003F3ADD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		98E2269824D93B74003F3ADD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		98E2269924D93B74003F3ADD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		98E2269B24D93B74003F3ADD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "GLSL三角形变换（索引绘图）/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bore.GLSL-----------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		98E2269C24D93B74003F3ADD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "GLSL三角形变换（索引绘图）/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bore.GLSL-----------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		98E2269E24D93B74003F3ADD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "GLSL三角形变换（索引绘图）Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bore.GLSL-----------Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GLSL三角形变换（索引绘图）.app/GLSL三角形变换（索引绘图）";
+			};
+			name = Debug;
+		};
+		98E2269F24D93B74003F3ADD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "GLSL三角形变换（索引绘图）Tests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bore.GLSL-----------Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GLSL三角形变换（索引绘图）.app/GLSL三角形变换（索引绘图）";
+			};
+			name = Release;
+		};
+		98E226A124D93B74003F3ADD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "GLSL三角形变换（索引绘图）UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bore.GLSL-----------UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "GLSL三角形变换（索引绘图）";
+			};
+			name = Debug;
+		};
+		98E226A224D93B74003F3ADD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "GLSL三角形变换（索引绘图）UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.bore.GLSL-----------UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "GLSL三角形变换（索引绘图）";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		98E2266624D93B72003F3ADD /* Build configuration list for PBXProject "GLSL三角形变换（索引绘图）" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98E2269824D93B74003F3ADD /* Debug */,
+				98E2269924D93B74003F3ADD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		98E2269A24D93B74003F3ADD /* Build configuration list for PBXNativeTarget "GLSL三角形变换（索引绘图）" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98E2269B24D93B74003F3ADD /* Debug */,
+				98E2269C24D93B74003F3ADD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		98E2269D24D93B74003F3ADD /* Build configuration list for PBXNativeTarget "GLSL三角形变换（索引绘图）Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98E2269E24D93B74003F3ADD /* Debug */,
+				98E2269F24D93B74003F3ADD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		98E226A024D93B74003F3ADD /* Build configuration list for PBXNativeTarget "GLSL三角形变换（索引绘图）UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98E226A124D93B74003F3ADD /* Debug */,
+				98E226A224D93B74003F3ADD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 98E2266324D93B72003F3ADD /* Project object */;
+}
