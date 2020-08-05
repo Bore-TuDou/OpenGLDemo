@@ -42,7 +42,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2r-IK-yLB">
-                                <rect key="frame" x="185" y="738" width="45" height="44"/>
+                                <rect key="frame" x="184.5" y="738" width="45" height="44"/>
                                 <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Y">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -56,15 +56,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="D2r-IK-yLB" firstAttribute="height" secondItem="x7U-ch-kOi" secondAttribute="height" id="68c-8a-GdB"/>
-                            <constraint firstItem="D2r-IK-yLB" firstAttribute="leading" relation="lessThanOrEqual" secondItem="x7U-ch-kOi" secondAttribute="trailing" constant="60" id="6SC-0u-Za1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f2k-cR-hid" secondAttribute="trailing" constant="79" id="C5T-jB-Dpg"/>
                             <constraint firstItem="f2k-cR-hid" firstAttribute="centerY" secondItem="x7U-ch-kOi" secondAttribute="centerY" id="CYJ-uK-hgY"/>
                             <constraint firstItem="D2r-IK-yLB" firstAttribute="centerY" secondItem="x7U-ch-kOi" secondAttribute="centerY" id="Mts-am-YAu"/>
                             <constraint firstItem="f2k-cR-hid" firstAttribute="height" secondItem="x7U-ch-kOi" secondAttribute="height" id="POL-fQ-yxv"/>
-                            <constraint firstItem="f2k-cR-hid" firstAttribute="leading" relation="lessThanOrEqual" secondItem="D2r-IK-yLB" secondAttribute="trailing" constant="60" id="VHF-N6-bhr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f2k-cR-hid" secondAttribute="trailing" constant="79" id="Tx7-ud-oaQ"/>
                             <constraint firstItem="D2r-IK-yLB" firstAttribute="width" secondItem="x7U-ch-kOi" secondAttribute="width" id="WrM-qe-YCN"/>
                             <constraint firstItem="f2k-cR-hid" firstAttribute="width" secondItem="x7U-ch-kOi" secondAttribute="width" id="e2i-fb-EYg"/>
                             <constraint firstItem="x7U-ch-kOi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="liv-xX-DAj"/>
+                            <constraint firstItem="D2r-IK-yLB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mA7-1H-U4K"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="x7U-ch-kOi" secondAttribute="bottom" constant="80" id="xzY-vM-J9O"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

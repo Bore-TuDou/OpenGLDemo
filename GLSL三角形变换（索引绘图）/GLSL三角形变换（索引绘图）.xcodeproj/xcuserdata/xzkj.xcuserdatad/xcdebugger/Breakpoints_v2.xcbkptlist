@@ -3,4 +3,22 @@
    uuid = "37FF2AAA-283F-4906-B9A0-F2EFB3DEF8E9"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "294AAEA5-2F8E-4284-86A2-186447BDC04B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GLSL&#x4e09;&#x89d2;&#x5f62;&#x53d8;&#x6362;&#xff08;&#x7d22;&#x5f15;&#x7ed8;&#x56fe;&#xff09;/GLView.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "344"
+            endingLineNumber = "344"
+            landmarkName = "-setupTexture:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

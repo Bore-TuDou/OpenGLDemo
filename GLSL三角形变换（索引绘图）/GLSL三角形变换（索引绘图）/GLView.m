@@ -142,7 +142,7 @@
 
 -(void)render{
     //清屏颜色
-    glClearColor(1.f, 1.f, 1.f, 1.f);
+    glClearColor(0.f, 0.f, 0.f, 1.f);
     //清楚颜色缓冲区
     glClear(GL_COLOR_BUFFER_BIT);
     
@@ -179,12 +179,11 @@
     //(1)顶点数组 前3顶点值（x,y,z），后3位颜色值(RGB)
     GLfloat attrArr[] =
     {
-        -0.5f, 0.5f, 0.0f,      1.0f, 0.0f, 1.0f, //左上0
-        0.5f, 0.5f, 0.0f,       1.0f, 0.0f, 1.0f, //右上1
-        -0.5f, -0.5f, 0.0f,     1.0f, 1.0f, 1.0f, //左下2
-        
-        0.5f, -0.5f, 0.0f,      1.0f, 1.0f, 1.0f, //右下3
-        0.0f, 0.0f, 1.0f,       0.0f, 1.0f, 0.0f, //顶点4
+        -0.5f, 0.5f, 0.0f,      0.0f, 0.0f, 0.5f,       0.0f, 1.0f,//左上
+        0.5f, 0.5f, 0.0f,       0.0f, 0.5f, 0.0f,       1.0f, 1.0f,//右上
+        -0.5f, -0.5f, 0.0f,     0.5f, 0.0f, 1.0f,       0.0f, 0.0f,//左下
+        0.5f, -0.5f, 0.0f,      0.0f, 0.0f, 0.5f,       1.0f, 0.0f,//右下
+        0.0f, 0.0f, 1.0f,       1.0f, 1.0f, 1.0f,       0.5f, 0.5f,//顶点
     };
     
     //(2).索引数组
@@ -225,15 +224,24 @@
     //参数4：normalized,固定点数据值是否应该归一化，或者直接转换为固定值。（GL_FALSE）
     //参数5：stride,连续顶点属性之间的偏移量，默认为0；
     //参数6：指定一个指针，指向数组中的第一个顶点属性的第一个组件。默认为0
-    glVertexAttribPointer(position, 3, GL_FLOAT, GL_FALSE, sizeof(GL_FLOAT)*6, NULL);
+    glVertexAttribPointer(position, 3, GL_FLOAT, GL_FALSE, sizeof(GL_FLOAT)*8, NULL);
     
     //处理顶点的颜色值
     GLuint positionColor = glGetAttribLocation(self.myProgram, "positionColor");
     glEnableVertexAttribArray(positionColor);
-    glVertexAttribPointer(positionColor, 3, GL_FLOAT, GL_FALSE, sizeof(GL_FLOAT) * 6, (float *)NULL + 3);
+    glVertexAttribPointer(positionColor, 3, GL_FLOAT, GL_FALSE, sizeof(GL_FLOAT) * 8, (float *)NULL + 3);
+    
+    GLuint textColor = glGetAttribLocation(self.myProgram, "textColor");
+    glEnableVertexAttribArray(textColor);
+    glVertexAttribPointer(textColor, 2, GL_FLOAT, GL_FALSE, sizeof(GL_FALSE) * 8, (float *)NULL + 6);
+    
+    //载入对应纹理
+    [self setupTexture:@"daitu"];
+    //对应的纹理id传入到片元着色器
+    glUniform1i(glGetUniformLocation(self.myProgram, "colorMap"), 0);
     
     
-    //设置投影矩阵和模型视图矩阵并传递到着色其中红
+    //设置投影矩阵和模型视图矩阵并传递到着色其中
     GLuint projectionMatrixSlot = glGetUniformLocation(self.myProgram, "projectionMatrix");
     GLuint modelViewMatrixSlot = glGetUniformLocation(self.myProgram, "modelViewMatrix");
     
@@ -328,6 +336,64 @@
     
     
     
+}
+
+//从图片中加载纹理
+- (GLuint)setupTexture:(NSString *)fileName{
+    CGImageRef spriteImage = (CGImageRef)[UIImage imageNamed:fileName].CGImage;
+    if(!spriteImage){
+        NSLog(@"图片加载失败");
+        return 0;
+    }
+    size_t width = CGImageGetWidth(spriteImage);
+    size_t height = CGImageGetHeight(spriteImage);
+    
+    //获取图片的字节数(宽*高*4（RGBA）)
+    GLubyte * spriteData = (GLubyte *)calloc(width * height * 4, sizeof(GLubyte));
+    
+    //创建上下文
+    /*
+    参数1：data,指向要渲染的绘制图像的内存地址
+    参数2：width,bitmap的宽度，单位为像素
+    参数3：height,bitmap的高度，单位为像素
+    参数4：bitPerComponent,内存中像素的每个组件的位数，比如32位RGBA，就设置为8
+    参数5：bytesPerRow,bitmap的没一行的内存所占的比特数
+    参数6：colorSpace,bitmap上使用的颜色空间
+    参数7：kCGImageAlphaPremultipliedLast：RGBA
+    */
+    CGContextRef spriteContext = CGBitmapContextCreate(spriteData, width, height, 8, width * 4, CGImageGetColorSpace(spriteImage), kCGImageAlphaPremultipliedLast);
+
+    
+    //在CGContextRef上--> 将图片绘制出来
+    CGRect rect = CGRectMake(0, 0, width, height);
+    
+    CGContextTranslateCTM(spriteContext, 0, height);
+    CGContextScaleCTM(spriteContext, 1.0, -1.0);
+    CGContextDrawImage(spriteContext, rect, spriteImage);
+    
+    //使用默认方式绘制
+    CGContextDrawImage(spriteContext, rect, spriteImage);
+    
+    //绘制完成后释放上下文
+    CGContextRelease(spriteContext);
+    
+    //绑定纹理到默认的纹理id
+    glBindTexture(GL_TEXTURE_2D, 0);
+    
+    //设置纹理属性
+    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+    
+    float fw = width, fh = height;
+    
+    //载入纹理
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, fw, fh, 0, GL_RGBA, GL_UNSIGNED_BYTE, spriteData);
+    
+    //释放spriteData
+    free(spriteData);
+    return 0;
 }
 
 -(GLuint)loadShader:(NSString *)vert frag:(NSString *)frag{
